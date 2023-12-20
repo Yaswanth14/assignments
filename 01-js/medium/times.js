@@ -9,5 +9,18 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
-    return 0.01;
+    sum = 0; i = 1;
+
+    beforeExe = new Date();
+    while(i<=n)
+    {
+        sum += i;
+        i++;
+    }
+    afterExe = new Date();
+
+    return afterExe - beforeExe;
 }
+
+n = calculateTime(1000000000);
+console.log("Time taken = " + n);
